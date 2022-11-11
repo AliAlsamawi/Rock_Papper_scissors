@@ -1,3 +1,4 @@
+// console.log('hello world');
 /*
   Rock Paper Scissors 🚀🔥
   Concepts covered in this project
@@ -14,9 +15,18 @@
 // getComputerChoice() 👉 'Rock'
 // getComputerChoice() 👉 'Scissors'
 function getComputerChoice() {
-  
+  let choice = Math.floor(Math.random("rock", "paper", "scissors") * 3)
+  // console.log(choice,'hello world');
+  if (choice === 0) {
+    return "Rock"
+  }else if(choice === 1){
+    return "Paper"
+  }else{
+    return "Scissors"
+  }
 }
-
+// console.log(getComputerChoice());
+// getComputerChoice()
 // ** getResult compares playerChoice & computerChoice and returns the score accordingly **
 // human wins - getResult('Rock', 'Scissors') 👉 1
 // human loses - getResult('Scissors', 'Rock') 👉 -1
