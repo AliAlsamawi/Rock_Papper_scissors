@@ -1,32 +1,33 @@
 // console.log('hello world');
+const playerScore = document.getElementById("player-score").innerText;
 /*
-  Rock Paper Scissors 🚀🔥
-  Concepts covered in this project
-    👉 For loops
-    👉 Dom Manipulation
-    👉 Variables
-    👉 Conditionals (if else if)
-    👉 Template Literals
-    👉 Event Listeners
-    👉 Higher order Function (Math.random())
+Rock Paper Scissors 🚀🔥
+Concepts covered in this project
+👉 For loops
+👉 Dom Manipulation
+👉 Variables
+👉 Conditionals (if else if)
+👉 Template Literals
+👉 Event Listeners
+👉 Higher order Function (Math.random())
 */
 
 // ** getComputerChoice randomly selects between `rock` `paper` `scissors` and s that string **
 // getComputerChoice() 👉 'Rock'
 // getComputerChoice() 👉 'Scissors'
-let getComputerChoice = () => {
+  function getComputerChoice() {
   let choice = Math.floor(Math.random("rock", "paper", "scissors") * 3);
-  // console.log(choice,'hello world');
+  // console.log(choice, 'hello world');
   if (choice === 0) {
-    ("Rock");
+    return "Rock";
   } else if (choice === 1) {
-    ("Paper");
+    return "Paper";
   } else {
-    ("Scissors");
-  }
-};
-// console.log(getComputerChoice());
-// getComputerChoice()
+    return "Scissors";
+  };
+}
+console.log(getComputerChoice());
+getComputerChoice()
 // ** getResult compares playerChoice & computerChoice and s the score accordingly **
 // human wins - getResult('Rock', 'Scissors') 👉 1
 // human loses - getResult('Scissors', 'Rock') 👉 -1
@@ -53,7 +54,8 @@ function getResult(playerChoice, computerChoice) {
   }
   return score[0];
 }
-// console.log(getResult("Paper", "Scissors"));
+console.log((getResult("Paper", "Scissors")))
+
 // All situations where human wins, set `score` to 1
 // make sure to use else ifs here
 // Otherwise human loses (aka set score to -1)
@@ -62,9 +64,10 @@ function getResult(playerChoice, computerChoice) {
 // ** showResult updates the DOM to `You Win!` or `You Lose!` or `It's a Draw!` based on the score. Also shows Player Choice vs. Computer Choice**
 function showResult(score, playerChoice, computerChoice) {
   // Hint: on a score of -1
-  
   // You should do result.innerText = 'You Lose!'
-  // Don't forget to grab the div with the 'result' id!
+  // Don't forget to grab the div with the 'result' id! 
+  // return
+
 }
 
 // ** Calculate who won and show it on the screen **
