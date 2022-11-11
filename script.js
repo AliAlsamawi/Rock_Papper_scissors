@@ -16,7 +16,7 @@ Concepts covered in this project
 // getComputerChoice() 👉 'Rock'
 // getComputerChoice() 👉 'Scissors'
   function getComputerChoice() {
-  let choice = Math.floor(Math.random("rock", "paper", "scissors") * 3);
+  let choice = Math.floor(Math.random() * 3);
   // console.log(choice, 'hello world');
   if (choice === 0) {
     return "Rock";
@@ -26,8 +26,8 @@ Concepts covered in this project
     return "Scissors";
   };
 }
-console.log(getComputerChoice());
-getComputerChoice()
+// console.log(getComputerChoice());
+// getComputerChoice()
 // ** getResult compares playerChoice & computerChoice and s the score accordingly **
 // human wins - getResult('Rock', 'Scissors') 👉 1
 // human loses - getResult('Scissors', 'Rock') 👉 -1
